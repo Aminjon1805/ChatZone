@@ -1,3 +1,5 @@
+# ONE VS ONE TERMINAL CHAT ROOM! (Server Part)
+
 import socket
 import threading
 import sys
@@ -42,7 +44,7 @@ def receive_msg():
                     pass
                 client.close()
                 break
-            sys.stdout.write(f"\rSERVER: {msg}\nYOU: ")
+            sys.stdout.write(f"\rCLIENT: {msg}\nYOU: ")
             sys.stdout.flush()
         except:
             break
