@@ -25,7 +25,7 @@ class ChatClientApp(QWidget):
         self.stop_event = threading.Event()
 
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        host = socket.gethostbyname(socket.gethostname())  # or enter IP of server
+        host = "192.168.51.34"
         self.client.connect((host, 12345))
         welcome = self.client.recv(1024).decode("utf-8")
         self.chat_display.append(f"Server: {welcome}")
